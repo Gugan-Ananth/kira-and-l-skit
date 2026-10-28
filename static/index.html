@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kira vs L</title>
+  <link rel="stylesheet" href="/static/app.css?v=20261026a">
+</head>
+<body>
+  <div class="scene" aria-hidden="true">
+    <img class="float lean" src="/static/art/l-lean.png" alt="">
+    <img class="float sit" src="/static/art/l-sit.png" alt="">
+    <img class="float kira" src="/static/art/kira.png" alt="">
+    <img class="float pair" src="/static/art/pair.png" alt="">
+  </div>
+
+  <section id="login" class="gate" hidden>
+    <form id="login-form" class="panel">
+      <img src="/static/art/l-sit.png" alt="">
+      <label>
+        Password
+        <input id="login-password" type="password" autocomplete="current-password" required>
+      </label>
+      <button type="submit">Enter</button>
+      <p id="login-error" class="error" role="alert"></p>
+    </form>
+  </section>
+
+  <main id="app" hidden>
+    <section id="shelf" class="shelf">
+      <div id="board" class="board">
+        <div id="side-left" class="side left"></div>
+        <button id="new-skit" class="plus" type="button" aria-label="New skit">+</button>
+        <div id="side-right" class="side right"></div>
+      </div>
+      <p id="shelf-toast" class="error" role="status"></p>
+    </section>
+
+    <section id="editor" class="editor" hidden>
+      <div class="sheet">
+        <button id="back" type="button" class="text-btn back">Back</button>
+        <div class="casters">
+          <button id="add-l" class="caster" type="button" aria-label="Add an L line">
+            <img src="/static/art/l-icon.png" alt="">
+            <span class="mini-plus" aria-hidden="true">+</span>
+          </button>
+          <button id="add-kira" class="caster" type="button" aria-label="Add a Kira line">
+            <img src="/static/art/kira-icon.png" alt="">
+            <span class="mini-plus" aria-hidden="true">+</span>
+          </button>
+        </div>
+        <div id="dialogues"></div>
+        <div class="editor-foot">
+          <button id="generate" type="button">Generate audio</button>
+          <p id="toast" class="error" role="status"></p>
+          <div id="mix" class="mix" hidden>
+            <audio id="mix-audio" controls preload="none"></audio>
+            <button id="mix-download" type="button" class="text-btn" data-opens-menu="true">Download</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="popover" class="popover" hidden></div>
+  <div id="progress" class="progress" hidden>
+    <div class="progress-card" role="dialog" aria-modal="true" aria-labelledby="progress-title" aria-busy="true">
+      <img id="progress-face" alt="">
+      <p id="progress-kicker"></p>
+      <h2 id="progress-title">Generating audio</h2>
+      <p id="progress-quote"></p>
+      <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      <p id="progress-detail">Starting…</p>
+    </div>
+  </div>
+  <script src="/static/app.js?v=20261026a"></script>
+</body>
+</html>

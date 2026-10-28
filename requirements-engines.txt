@@ -1,0 +1,8 @@
+# Apple Silicon speech engines. Install after requirements.txt.
+# First generate downloads the 4-bit weights.
+f5-tts-mlx
+mlx-audio
+# Indic-Speak Tamil (scripts/anya_speak.py). Not used by the skit page.
+mlx-lm
+torch
+snac

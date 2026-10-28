@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/
+models/
+packaging/windows/payload/
+packaging/windows/output/
+packaging/windows/MicrosoftEdgeWebView2RuntimeInstallerX64.exe
+.pytest_cache/
+voices/**/*.wav
+voices/**/*.mp3
+voices/**/*.m4a
+voices/**/*.flac
+voices/**/*.txt
+!voices/README.md

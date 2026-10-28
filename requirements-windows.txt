@@ -1,0 +1,5 @@
+# Windows desktop build. The build script installs CPU torch before this file.
+# See packaging/windows/BUILD.md.
+f5-tts
+pywebview
+huggingface_hub
